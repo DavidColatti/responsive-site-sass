@@ -1,21 +1,21 @@
 // Menu Button
 .menu-btn {
   position: absolute;
-  @include easeOut;
-  cursor: pointer;
-  right: 35px;
   z-index: 3;
+  right: 35px;
   top: 35px;
+  cursor: pointer;
+  @include easeOut;
 
   .btn-line {
-    background: #fff;
-    margin: 0 0 5px 0;
-    @include easeOut;
-    height: 3px;
     width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: set-text-color($primary-color);
+    @include easeOut;
   }
 
-  // Rotate into X with Menu Lines
+  // Rotate Into X With Menu Lines
   &.close {
     transform: rotate(180deg);
 
@@ -53,8 +53,8 @@
   &-branding,
   &-nav {
     display: flex;
-    align-items: center;
     flex-flow: column wrap;
+    align-items: center;
     justify-content: center;
     float: left;
     width: 50%;
@@ -65,8 +65,8 @@
   &-nav {
     margin: 0;
     padding: 0;
-    list-style: none;
     background: darken($primary-color, 5);
+    list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
@@ -90,9 +90,9 @@
     .portrait {
       width: 250px;
       height: 250px;
-      border-radius: 50%;
       background: url("../img/portrait.jpg");
-      border: 3px solid $secondary-color;
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
     }
   }
 
@@ -117,7 +117,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
